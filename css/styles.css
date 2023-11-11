@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --black-color: #333333;
+  --gray-color: #a5a5a5;
+  --orange-color: #ff9f0a;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  /*background-color: rebeccapurple;*/
+  position: relative;
+  min-height: 100vh;
+}
+
+.css-title-info {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.css-title-info i {
+  margin-top: 2px;
+}
+
+.css-show-eval {
+  /*background-color: #ff9f0a;*/
+  height: 100%;
+  padding:  20px;
+  padding-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.css-show-eval>p {
+  font-size: 60px;
+  /*margin: 20px 0;*/
+  height: 60px;
+  /*background-color: #a5a5a5;*/
+}
+
+.css-show-eval>p:first-child {
+  font-size: 30px;
+  color: gray;
+  /*background-color: rebeccapurple;*/
+}
+
+.css-grid-button {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 70px));
+  grid-gap: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.css-grid-button>.css-long-button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.operator {
+  background-color: var(--orange-color);
+  color: white;
+}
+
+.css-number-button {
+  background-color: var(--black-color);
+  color: white;
+}
+
+.css-feature-button {
+  background-color: var(--gray-color);
+  color: black;
+}
+
+button {
+  height: 70px;
+  border-radius: 100px;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+@media screen and (width < 550px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /*place-items: center;*/
+    min-height: 100vh;
+    background-color: black;
+  }
+
+  .container {
+    background-color: black;
+  }
+
+  .css-grid-button {
+    grid-template-columns: repeat(4, minmax(0, 95px));
+  }
+
+  button {
+    height: 95px;
+    font-size: 40px;
+  }
+}
